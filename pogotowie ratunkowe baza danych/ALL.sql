@@ -4,7 +4,7 @@ CREATE TABLE [Stanowiska] (
   [ID Stanowiska] INT PRIMARY KEY,
   [Nazwa] VARCHAR(60),
   [Stawka Godzinowa] money NOT NULL
-)
+);
 
 SELECT * FROM Pracownicy
 DROP TABLE Stanowiska
@@ -82,8 +82,6 @@ INSERT INTO Pracownicy VALUES
 (29, 'Bruno', 'Makowski', 6, NULL, 'Kraków', 'ul. Żyzna 2/75'),
 --Ksiegowy
 (30, 'Faustyna', 'Adamska', 7, NULL, 'Kraków', 'ul. Leba 8');
-
-
 
 
 
