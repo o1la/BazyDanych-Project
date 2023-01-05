@@ -228,7 +228,7 @@ CREATE TABLE [Typ Wyposażenia]
  [Id] INT PRIMARY Key,
  [Nazwa] VARCHAR(50)
 )
-Select * From [Typ Wyposażenia]
+SELECT * FROM [Typ Wyposażenia]
 DROP TABLE [Typ Wyposażenia]
 
  

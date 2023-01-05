@@ -9,9 +9,9 @@ CREATE TABLE [Pacjenci](
 );
 
 INSERT INTO Pacjenci VALUES
-(1, '99041635492', 'Lucjan', 'Michalak', 'Kraków', 'ul. Mleczowa 41', '1999-04-16'),
+(1, '99041635492', 'Lucjan', 'Michalak', 'Kraków', 'ul. Kierunkowa 13', '1999-04-16'),
 (2, '54020935699', 'Oktawian', 'Zieliński', 'Kraków', 'ul. Długa 51', '1954-02-09'),
-(3, '88012461875', 'Fabian', 'Jaworski', 'Kraków', 'ul. Ryska 62/85', '1988-01-24'),
+(3, '88012461875', 'Fabian', 'Jaworski', 'Skawina', 'ul. Ryska 62/85', '1988-01-24'),
 (4, '79081177916', 'Oskar', 'Sobczak', 'Kraków', 'ul. Bracka 24/74', '1979-08-11'),
 (5, '82030111963', 'Jowita', 'Urbańska', 'Kraków', 'ul. Wiosłowa 14', '1982-03-01'),
 (6, '76081273123', 'Klementyna', 'Kucharska', 'Kraków', 'ul. Odrzańska 5', '1976-08-12'),
