@@ -3,8 +3,11 @@ CREATE TABLE [Wyposażenie karetki P]
  [ID Produktu] INT NOT NULL,
  [Ilość] INT
     CONSTRAINT FK_IDproduktu FOREIGN KEY ([ID Produktu])
-    REFERENCES [Wyposażenie karetek] ([ID Produktu])
+    REFERENCES [Produkty] ([ID Produktu])
 );
+
+--SELECT * FROM [Wyposażenie Karetki P]
+--DROP TABLE [Wyposażenie Karetki P]
 
 INSERT INTO [Wyposażenie karetki P] VALUES
 (1, 1),

@@ -8,8 +8,8 @@ CREATE TABLE [Produkty]
     REFERENCES [Typ Wyposażenia] ([ID])
 );
 
---SELECT * FROM [Wyposażenie karetek]
---DROP TABLE [Wyposażenie karetek]
+--SELECT * FROM [Produkty]
+--DROP TABLE [Produkty]
 
 INSERT INTO [Produkty] VALUES
 (1, 1, 'Nosze główne', 350.04),
