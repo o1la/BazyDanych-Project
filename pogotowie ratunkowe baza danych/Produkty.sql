@@ -1,16 +1,17 @@
-CREATE TABLE [Wyposażenie karetek]
+CREATE TABLE [Produkty]
 (
- [ID Typu Wyposażenia] INT,
+ [ID Typu] INT,
  [ID Produktu] INT PRIMARY KEY,
- [Nazwa Produktu] VARCHAR(50)
-    CONSTRAINT FK_IDtypWyp FOREIGN KEY ([ID Typu Wyposażenia])
-    REFERENCES [Typu Wyposażenia] ([ID])
+ [Nazwa Produktu] VARCHAR(50),
+ [Cena jednostkowa] MONEY,
+    CONSTRAINT FK_IDtyp FOREIGN KEY ([ID Typu])
+    REFERENCES [Typ Wyposażenia] ([ID])
 );
 
 --SELECT * FROM [Wyposażenie karetek]
 --DROP TABLE [Wyposażenie karetek]
 
-INSERT INTO [Wyposażenie karetek] VALUES
+INSERT INTO [Produkty] VALUES
 (1, 1, 'Nosze główne'),
 (1, 2, 'Nosze podbierakowe'),
 (1, 3, 'Krzesełko kardiologiczne'),
