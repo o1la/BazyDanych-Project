@@ -1,13 +1,20 @@
 CREATE TABLE [Pracownicy]
 (
- [ID] INT PRIMARY Key,
+ [ID] INT PRIMARY KEY,
  [Imię] VARCHAR(50),
  [Nazwisko] VARCHAR(50),
- [ID Stanowiska] INT,
+ [ID Stanowiska] INT NOT NULL,
  [ID Zespołu] INT,
  [Miasto] VARCHAR(50),
  [Ulica] VARCHAR(50),
+    CONSTRAINT FK_IDstanowiska FOREIGN KEY ([ID Stanowiska])
+    REFERENCES Stanowiska([ID Stanowiska]),
+    CONSTRAINT FK_IDzespołu FOREIGN KEY ([ID Zespołu])
+    REFERENCES Zespoły([ID]) 
 );
+
+--DROP TABLE Pracownicy
+--SELECT * FROM Pracownicy
 
 INSERT INTO Pracownicy VALUES 
 (1, 'Albert', 'Bosowski', 1, NULL, 'Kraków', 'ul. Promienna 25'),
@@ -51,5 +58,3 @@ INSERT INTO Pracownicy VALUES
 (29, 'Bruno', 'Makowski', 6, NULL, 'Kraków', 'ul. Żyzna 2/75'),
 --Ksiegowy
 (30, 'Faustyna', 'Adamska', 7, NULL, 'Kraków', 'ul. Leba 8');
-
---SELECT * FROM Pracownicy

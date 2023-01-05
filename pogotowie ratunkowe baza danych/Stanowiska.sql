@@ -1,8 +1,11 @@
 CREATE TABLE [Stanowiska] (
   [ID Stanowiska] INT PRIMARY KEY,
   [Nazwa] VARCHAR(60),
-  [Stawka Godzinowa] money NOT NULL
+  [Stawka Godzinowa] MONEY NOT NULL
 );
+
+--SELECT * FROM Stanowiska
+--DROP TABLE Stanowiska
 
 INSERT INTO Stanowiska VALUES 
 (1, 'Dyrektor', 75.00),
@@ -12,5 +15,3 @@ INSERT INTO Stanowiska VALUES
 (5, 'Kierowca karetki', 30.00),
 (6, 'Operator numeru alarmowego', 25.00),
 (7, 'Księgowy', 40.00);
-
---SELECT * FROM Stanowiska

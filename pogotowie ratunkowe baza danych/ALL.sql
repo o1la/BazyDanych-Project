@@ -1,34 +1,8 @@
-
-
 CREATE TABLE [Stanowiska] (
   [ID Stanowiska] INT PRIMARY KEY,
   [Nazwa] VARCHAR(60),
   [Stawka Godzinowa] money NOT NULL
 );
-
-SELECT * FROM Pracownicy
-DROP TABLE Stanowiska
-
-
-CREATE TABLE [Pracownicy]
-(
- [ID] INT PRIMARY Key,
- [Imię] VARCHAR(50),
- [Nazwisko] VARCHAR(50),
- [ID Stanowiska] INT,
- [ID Zespołu] INT,
- [Miasto] VARCHAR(50),
- [Ulica] VARCHAR(50),
-);
-
-CREATE TABLE [Zespoły] (
- [ID] INT PRIMARY KEY,
- [Nazwa] VARCHAR(50),
- [ID Lidera] INT
-);
-
-
-
 
 INSERT INTO Stanowiska VALUES 
 (1, 'Dyrektor', 75.00),
@@ -39,6 +13,24 @@ INSERT INTO Stanowiska VALUES
 (6, 'Operator numeru alarmowego', 25.00),
 (7, 'Księgowy', 40.00);
 
+SELECT * FROM Stanowiska
+DROP TABLE Stanowiska
+
+
+CREATE TABLE [Pracownicy]
+(
+ [ID] INT PRIMARY KEY,
+ [Imię] VARCHAR(50),
+ [Nazwisko] VARCHAR(50),
+ [ID Stanowiska] INT NOT NULL,
+ [ID Zespołu] INT,
+ [Miasto] VARCHAR(50),
+ [Ulica] VARCHAR(50),
+    CONSTRAINT FK_IDstanowiska FOREIGN KEY ([ID Stanowiska])
+    REFERENCES Stanowiska([ID Stanowiska]),
+     CONSTRAINT FK_IDzespołu FOREIGN KEY ([ID Zespołu])
+    REFERENCES Zespoly(ID) 
+);
 
 INSERT INTO Pracownicy VALUES 
 (1, 'Albert', 'Bosowski', 1, NULL, 'Kraków', 'ul. Promienna 25'),
@@ -83,7 +75,15 @@ INSERT INTO Pracownicy VALUES
 --Ksiegowy
 (30, 'Faustyna', 'Adamska', 7, NULL, 'Kraków', 'ul. Leba 8');
 
+SELECT * FROM Pracownicy
+DROP TABLE Pracownicy
 
+
+CREATE TABLE [Zespoły] (
+ [ID] INT PRIMARY KEY,
+ [Nazwa] VARCHAR(50),
+ [ID Lidera] INT
+);
 
 INSERT INTO Zespoły VALUES 
 (1, 'Niedziedzie', 3),
@@ -95,6 +95,9 @@ INSERT INTO Zespoły VALUES
 (7, 'Koguty', 9),
 (8, 'Koguty', 10);
 
+DROP TABLE Zespoły
+SELECT * FROM Zespoły
+
 
 CREATE TABLE [Urlopy] (
 [ID Pracownika] INT NOT NULL,
@@ -102,8 +105,6 @@ CREATE TABLE [Urlopy] (
 [Koniec] date,
 [Płatny] BIT
 );
-
-SELECT * FROM Urlopy
 
 INSERT INTO Urlopy VALUES
 (1, '2023-04-28', '2023-05-10', 1),
@@ -117,7 +118,9 @@ INSERT INTO Urlopy VALUES
 (28, '2023-01-16', '2023-01-24', 1),
 (27, '2023-02-09', '2023-02-10', 0);
 
+SELECT * FROM Urlopy
 DROP TABLE Urlopy
+
 
 CREATE TABLE [Pacjenci](
  [ID] INT PRIMARY Key,
@@ -129,13 +132,184 @@ CREATE TABLE [Pacjenci](
  [Data Urodzenia] date
 );
 
-SELECT * FROM Pacjenci
-
 INSERT INTO Pacjenci VALUES
-(1, 99041635492, 'Lucjan', 'Michalak', 'Kraków', 'ul. Mleczowa 41', '99-04-16'),
-(2, 54020935699, 'Oktawian', 'Zieliński', 'Kraków', 'ul. Długa 51', '54-02-09'),
-(3, 88012461875, 'Fabian', 'Jaworski', 'Kraków', 'ul. Ryska 62/85', '88-01-24'),
-(4, 79081177916, 'Oskar', 'Sobczak', 'Kraków', 'ul. Bracka 24/74', '79-08-11'),
+(1, '99041635492', 'Lucjan', 'Michalak', 'Kraków', 'ul. Mleczowa 41', '1999-04-16'),
+(2, '54020935699', 'Oktawian', 'Zieliński', 'Kraków', 'ul. Długa 51', '1954-02-09'),
+(3, '88012461875', 'Fabian', 'Jaworski', 'Kraków', 'ul. Ryska 62/85', '1988-01-24'),
+(4, '79081177916', 'Oskar', 'Sobczak', 'Kraków', 'ul. Bracka 24/74', '1979-08-11'),
+(5, '82030111963', 'Jowita', 'Urbańska', 'Kraków', 'ul. Wiosłowa 14', '1982-03-01'),
+(6, '76081273123', 'Klementyna', 'Kucharska', 'Kraków', 'ul. Odrzańska 5', '1976-08-12'),
+(7, '67110759826', 'Jola', 'Woźniak', 'Kraków', 'ul. Ptasia 52', '1967-11-01'),
+(8, '77050614723', 'Alana', 'Baran', 'Kraków', 'ul. Akacjowa 28', '1977-05-06');
+
+SELECT * FROM Pacjenci
+DROP TABLE Pacjenci
+
+--------- 
+ 
+CREATE TABLE [Karetki]
+(
+ [ID] INT PRIMARY KEY,
+ [Model] VARCHAR(50),
+ [Rok Produkcji] date,
+ [Ostatni przegląd] date
+)
+SELECT * FROM Karetki
+Drop TABLE Karetki
+ 
+
+CREATE TABLE [Wyposażenie karetek]
+(
+ [ID Karetki] INT,
+ [ID Typu Wyposażenia] INT,
+ [ID Produktu] INT,
+ [Ilość] INT
+)
+
+Select * FROM [Wyposażenie karetek]
+DROP TABLE [Wyposażenie karetek]
+ 
+
+CREATE TABLE [Zgloszenia] 
+(
+ [ID Zgloszenia] INT NOT NULL,
+ [Data] date NOT NULL,
+ [Zgłaszający] VARCHAR(50),
+ [Adres] VARCHAR(50),
+ [Miasto] VARCHAR(50),
+ [Powód] VARCHAR(50),
+ CONSTRAINT PK_Zgloszenia PRIMARY KEY([ID Zgloszenia], data)
+);
+ 
+SELECT * FROM Zgloszenia
+DROP TABLE Zgloszenia
 
 
+CREATE TABLE [Wyjazdy] 
+(
+ [ID Zgłoszenia] INT NOT NULL,
+ [Czas wyjazdu] date,
+ [Czas powrotu] date,
+ [karetka] INT NOT NULL,
+ [Zespół] INT NOT NULL,
+ [ID Pacjenta] int
+ 
+);
+ 
+SELECT * FROM Wyjazdy
+DROP TABLE Wyjazdy
 
+ 
+CREATE TABLE [Ośrodki]
+(
+ [ID] INT PRIMARY Key,
+ [Miasto] VARCHAR(50),
+ [Ulica] VARCHAR(50),
+)
+ 
+Select * FROM [Ośrodki]
+DROP TABLE [Ośrodki]
+ 
+
+CREATE TABLE [Leki] 
+(
+[ID] INT PRIMARY KEY,
+[Nazwa] VARCHAR(50),
+[Producent] VARCHAR(50),
+[Cena jednostkowa] money
+);
+ 
+SELECT * FROM Leki
+DROP TABLE Leki
+ 
+
+CREATE TABLE [Typ Wyposażenia]
+(
+ [Id] INT PRIMARY Key,
+ [Nazwa] VARCHAR(50)
+)
+Select * From [Typ Wyposażenia]
+DROP TABLE [Typ Wyposażenia]
+
+ 
+CREATE TABLE [Sprzęty]
+(
+ [ID] INT PRIMARY KEY,
+ [Nazwa] VARCHAR(50),
+ [Nazwa Producenta] VARCHAR(50),
+ [Funkcja] VARCHAR(50),
+ [Co Ile Dni Serwis] INT,
+ [Cena Jednostkowa] money
+)
+
+SELECT * From [Sprzęty]
+DROP TABLE [Sprzęty]
+ 
+ 
+CREATE TABLE [Koszty]
+(
+ [ID] INT PRIMARY KEY,
+ [Data] date,
+ [Suma] money
+)
+ 
+SELECT * FROM Koszty
+DROP TABLE Koszty
+ 
+
+CREATE TABLE [Zakupy Wyposażenia]
+(
+ [ID] INT,
+ [ID Typu] int,
+ [ID Produktu] int,
+ [ilosc] int,
+ [cena jednostkowa] money
+)
+
+Select * From [Zakupy Wyposażenia]
+Drop TABLE [Zakupy Wyposażenia]
+
+ 
+CREATE TABLE [Inne Wydatki]
+(
+ [ID] INT,
+ [Typ Wydatku] Varchar(50),
+ [Koszt] money
+)
+ 
+SELECT * From [Inne Wydatki]
+DROP TABLE [Inne Wydatki]
+ 
+
+CREATE TABLE [Magazyn]
+(
+ [ID Typu Wyposażenia] INT,
+ [ID Produktu] INT,
+ [Ilość] INT
+)
+ 
+Select * FROM Magazyn
+DROP TABLE Magazyn
+ 
+
+CREATE TABLE [Budynki Pogotowia]
+(
+ [ID] int PRIMARY KEY,
+ [ID Typu] INT,
+ [Miasto] VARCHAR(50),
+ [Ulica] VARCHAR(50)
+)
+
+SELECT * FROM [Budynki Pogotowia]
+Drop Table [Budynki Pogotowia]
+ 
+
+CREATE TABLE [Typy Budynków]
+(
+ [Id] int PRIMARY Key,
+ [Typ] VARCHAR(50)
+)
+
+SELECT * From [Typy Budynków]
+DROP Table [Typy Budynków]
+ 
