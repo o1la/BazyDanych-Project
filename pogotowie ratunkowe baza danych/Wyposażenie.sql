@@ -1,4 +1,4 @@
-CREATE TABLE [Produkty]
+CREATE TABLE [Wyposażenie]
 (
  [ID Typu] INT,
  [ID Produktu] INT PRIMARY KEY,
@@ -8,10 +8,7 @@ CREATE TABLE [Produkty]
     REFERENCES [Typ Wyposażenia] ([ID])
 );
 
---SELECT * FROM [Produkty]
---DROP TABLE [Produkty]
-
-INSERT INTO [Produkty] VALUES
+INSERT INTO [Wyposażenie] VALUES
 (1, 1, 'Nosze główne', 350.04),
 (1, 2, 'Nosze podbierakowe', 300.11),
 (1, 3, 'Krzesełko kardiologiczne', 3500.16),
@@ -33,3 +30,6 @@ INSERT INTO [Produkty] VALUES
 (6, 19, 'Staza', 10.64),
 (6, 20, 'Cewnik', 55.73),
 (6, 21, 'Zestaw do drenażu', 235.97);
+
+--SELECT * FROM [Wyposażenie]
+--DROP TABLE [Wyposażenie]

@@ -7,3 +7,4 @@ CREATE TABLE [Koszty]
  
 SELECT * FROM Koszty
 DROP TABLE Koszty
+
