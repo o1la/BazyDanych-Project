@@ -9,5 +9,4 @@ CREATE TABLE [Typy Budynków]
 
 INSERT INTO [Typy Budynków] VALUES
 (1, 'Garaż'),
-(2, 'Magazyn'),
 (2, 'Budynek Główny');

@@ -8,13 +8,12 @@ CREATE TABLE [Budynki Pogotowia]
     REFERENCES [Typy Budynków] ([ID typu])
 )
 
-SELECT * FROM [Budynki Pogotowia]
-DROP TABLE [Budynki Pogotowia]
+
+--DROP TABLE [Budynki Pogotowia]
 
 INSERT INTO [Budynki Pogotowia] VALUES
-(1, 3, 'Kraków', 'ul. Winnicka 2'),
-(2, 1, 'Kraków', 'ul. Winnicka 2'),
-(3, 1, 'Kraków', 'ul. Winnicka 2'),
-(4, 1, 'Kraków', 'ul. Winnicka 2'),
-(5, 2, 'Kraków', 'ul. Winnicka 2');
--- mozna dodac budynki w innej lokaliacji jesli dobrze rozumiem ale idkidk
+(1, 1, 'Kraków', 'ul. Winnicka 2'),
+(2, 1, 'Kraków', 'ul. Polna 31'),
+(3, 2, 'Kraków', 'ul. Winnicka 2');
+
+SELECT * FROM [Budynki Pogotowia]

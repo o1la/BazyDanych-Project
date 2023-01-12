@@ -15,7 +15,7 @@ INSERT INTO Pacjenci VALUES
 (4, '79081177916', 'Oskar', 'Sobczak', 'Kraków', 'ul. Bracka 24/74', '1979-08-11'),
 (5, '82030111963', 'Jowita', 'Urbańska', 'Kraków', 'ul. Wiosłowa 14', '1982-03-01'),
 (6, '76081273123', 'Klementyna', 'Kucharska', 'Kraków', 'ul. Odrzańska 5', '1976-08-12'),
-(7, '67110759826', 'Jola', 'Woźniak', 'Kraków', 'ul. Ptasia 52', '1967-11-01'),
-(8, '77050614723', 'Alana', 'Baran', 'Kraków', 'ul. Akacjowa 28', '1977-05-06');
+(7, '67110759826', 'Jola', 'Woźniak', 'Kraków', 'ul. Ptasia 52', '1967-11-01');
 
 --SELECT * FROM Pacjenci
+--DROP TABLE Pacjenci

@@ -4,7 +4,7 @@ CREATE TABLE [Wyposażenie]
  [ID Produktu] INT PRIMARY KEY,
  [Nazwa Produktu] VARCHAR(50),
  [Cena jednostkowa] MONEY,
-    CONSTRAINT FK_IDtyp FOREIGN KEY ([ID Typu])
+    CONSTRAINT FK_IDTypwyp FOREIGN KEY ([ID Typu])
     REFERENCES [Typ Wyposażenia] ([ID])
 );
 
@@ -33,3 +33,4 @@ INSERT INTO [Wyposażenie] VALUES
 
 --SELECT * FROM [Wyposażenie]
 --DROP TABLE [Wyposażenie]
+

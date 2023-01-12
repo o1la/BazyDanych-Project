@@ -6,12 +6,12 @@ CREATE TABLE [Leki]
 [Substancja czynna] VARCHAR(50),
 [Ilość Substancji Czynnej w mg] INT,
 [Ilość w opakowaniu] INT,
-[Postać] VARCHAR(11),
+[Postać] VARCHAR(16),
 [Cena jednostkowa] MONEY
 );
  
 
-INSERT INTO Leki VALUES
+INSERT INTO [Leki] VALUES
 (1,'Polopiryna MAX', 'POLPHARMA', 'Acidum acetylsalicylicum', 500, 10, 'tabletki', 9.49),
 (2,'Adenocor', 'Sanofi-Aventis', 'Adenosinum', 3, 6, 'fiolki 2ml', 279.99),
 (3,'Cordarone', 'SANOFI-AVENTIS', 'Amiodaroni hydrochloridum', 200, 30, 'tabletki', 19.99),
@@ -24,4 +24,4 @@ INSERT INTO Leki VALUES
 (10,'Dexamethasone phosphate SF', 'Sun-Farm', 'Dexamethasoni phosphas', 4, 10,'fiolki 1ml', 27.00);
 
 SELECT * FROM Leki
-DROP TABLE Leki
+--DROP TABLE Leki

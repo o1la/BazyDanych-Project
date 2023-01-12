@@ -1,4 +1,4 @@
-CREATE TABLE [Wyposażenie karetki S]
+CREATE TABLE [Minimalne wyposażenie karetki S]
 (
  [ID Produktu] INT NOT NULL,
  [Ilość] INT
