@@ -1,14 +1,14 @@
-Create View [Wyjazdy Dzienne] AS
-Select LiczbaWyj.Dzień as Data, LiczbaP.LiczbaP as [Karetki typu P], IIF(LiczbaS.LiczbaS is NULL, 0, LiczbaS.LiczbaS) as [Karetki typu S]  FROM
-(Select Convert(date, [Czas wyjazdu]) Dzień, Count(*) LiczbaWyjazdow From Wyjazdy
-Group By Convert(date, [Czas wyjazdu])) AS LiczbaWyj
-Left Join
-(Select Convert(date, W.[Czas wyjazdu]) Dzień, Count(*) as LiczbaP From Wyjazdy W, Karetki K
-Where (W.Karetka = K.ID AND K.Model = 'P')
-Group By Convert(date, W.[Czas wyjazdu])) AS LiczbaP
-On LiczbaP.Dzień = LiczbaWyj.Dzień
-Left JOIN
-(Select Convert(date, W.[Czas wyjazdu]) Dzień, Count(*) as LiczbaS From Wyjazdy W, Karetki K
-Where (W.Karetka = K.ID AND K.Model = 'S')
-Group By Convert(date, W.[Czas wyjazdu]) ) AS LiczbaS
+CREATE VIEW [Wyjazdy Dzienne] AS
+SELECT LiczbaWyj.Dzień AS DATA, LiczbaP.LiczbaP AS [Karetki typu P], IIF(LiczbaS.LiczbaS IS NULL, 0, LiczbaS.LiczbaS) AS [Karetki typu S] FROM
+(SELECT CONVERT(DATE, [Czas wyjazdu]) Dzień, COUNT(*) LiczbaWyjazdow FROM Wyjazdy
+GROUP BY CONVERT(DATE, [Czas wyjazdu])) AS LiczbaWyj
+LEFT JOIN
+(SELECT CONVERT(date, W.[Czas wyjazdu]) Dzień, COUNT(*) AS LiczbaP FROM Wyjazdy W, Karetki K
+WHERE (W.Karetka = K.ID AND K.Model = 'P')
+GROUP BY CONVERT(DATE, W.[Czas wyjazdu])) AS LiczbaP
+ON LiczbaP.Dzień = LiczbaWyj.Dzień
+LEFT JOIN
+(SELECT CONVERT(DATA, W.[Czas wyjazdu]) Dzień, COUNT(*) AS LiczbaS FROM Wyjazdy W, Karetki K
+WHERE (W.Karetka = K.ID AND K.Model = 'S')
+GROUP BY CONVERT(DATA, W.[Czas wyjazdu]) ) AS LiczbaS
 ON LiczbaP.Dzień = LiczbaS.Dzień
