@@ -36,7 +36,7 @@ INSERT INTO Pracownicy VALUES
 (14, 'Sławomir', 'Skrzat', 5, 2, 'Kraków', 'ul. Ramzesa 64'),
 --Zespol 3 [Mlodszy ratownik, kierowca]
 (15, 'Grzegorz', 'Gryg', 4, 3, 'Skawina', 'ul. Wiklinowa 12'),
-(16, 'Elzbieta', '', 5, 3, 'Kraków', 'ul. Rubinowa 8/21'),
+(16, 'Elzbieta', 'Wyrwijdąb', 5, 3, 'Kraków', 'ul. Rubinowa 8/21'),
 --Zespol 4 [Mlodszy ratownik, kierowca]
 (17, 'Ignacy', 'Monciwoda', 4, 4, 'Kraków', 'ul. Bagienna 9/8'),
 (18, 'Nadia', 'Luc', 5, 4, 'Kraków', 'ul. Trawiasta 4/43'),
@@ -47,10 +47,10 @@ INSERT INTO Pracownicy VALUES
 (21, 'Jan', 'Maciejewski', 4, 6, 'Kraków', 'ul. Polna 2'),
 (22, 'Czesław', 'Wójcik', 5, 6, 'Kraków', 'ul. Leśna 64'),
 --Zespol 7 [Mlodszy ratownik, kierowca]
-(23, 'Emil', 'Zalewski', 5, 7, 'Kraków', 'ul. Kolejowa 36/25'),
+(23, 'Emil', 'Zalewski', 4, 7, 'Kraków', 'ul. Kolejowa 36/25'),
 (24, 'Patryk', 'Mazurek', 5, 7, 'Kraków', 'ul. Lipowa 7/83'),
 --Zespol 8 [Mlodszy ratownik, kierowca]
-(25, 'Diego', 'Kwiatkowski', 5, 8, 'Kraków', 'ul. Sokołowska 84'),
+(25, 'Diego', 'Kwiatkowski', 4, 8, 'Kraków', 'ul. Sokołowska 84'),
 (26, 'Gustaw', 'Baran', 5, 8, 'Kraków', 'ul. Lukrecjowa 83'),
 --Operatory numeru
 (27, 'Daniela', 'Michalak', 6, NULL, 'Libertów', 'ul. Krakowska 25'),
@@ -58,3 +58,4 @@ INSERT INTO Pracownicy VALUES
 (29, 'Bruno', 'Makowski', 6, NULL, 'Kraków', 'ul. Żyzna 2/75'),
 --Ksiegowy
 (30, 'Faustyna', 'Adamska', 7, NULL, 'Kraków', 'ul. Leba 8');
+

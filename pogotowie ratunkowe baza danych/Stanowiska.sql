@@ -15,3 +15,4 @@ INSERT INTO Stanowiska VALUES
 (5, 'Kierowca karetki', 35.00),
 (6, 'Operator numeru alarmowego', 30.00),
 (7, 'Księgowy', 65.00);
+

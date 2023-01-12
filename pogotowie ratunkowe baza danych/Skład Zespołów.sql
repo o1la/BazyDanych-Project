@@ -7,5 +7,4 @@ FROM Zespoły Z
     Stanowiska S ON (P.[ID Stanowiska] = S.[ID Stanowiska]);
 
 --DROP VIEW [Skład Zespołów]
-
-SELECT * FROM [Skład Zespołów]
+--SELECT * FROM [Skład Zespołów]
