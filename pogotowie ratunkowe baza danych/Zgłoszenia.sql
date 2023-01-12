@@ -26,4 +26,7 @@ INSERT INTO Zgłoszenia VALUES
 (11, '2022-12-03 15:13:58', 'Zofia Ziółkowska', 'ul. Odrzańska 5', 'Kraków', 'uporczywe wymioty zwłaszcza z domieszką krwi'),
 (12, '2022-12-03 16:46:56', 'Gabriel Kubiak', 'ul. Strusia 62/2', 'Skawina', 'nasilona duszność'),
 (13, '2022-12-03 20:27:42', 'Iza Błaszczyk', 'ul. Ptasia 52', 'Kraków', 'nagły ostry ból brzucha'),
-(14, '2022-12-03 22:33:03', 'Lidia Szewczyk', 'ul. Akacjowa 28', 'Kraków', 'zatrzymanie akcji serca');
+(14, '2022-12-03 22:33:03', 'Lidia Szewczyk', 'ul. Akacjowa 28', 'Kraków', 'zatrzymanie akcji serca'),
+(15, '2022-12-04 05:46:12', 'Jadwiga Hymel', 'ul. Łączna 43', 'Kraków', 'styrta się pali'),
+(16, '2022-12-04 12:21:44', 'Oktawian Duda', 'ul. Obozowa 10', 'Kraków', 'porażenie prądem'),
+(17, '2022-12-04 17:09:52', 'Eryk Kołodziej', 'ul. Gwarna 20', 'Kraków', 'poród');
