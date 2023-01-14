@@ -1,10 +1,10 @@
-CREATE TABLE [Grafik Zespółów] (
-[ID Zespółu] INT NOT NULL,
+CREATE TABLE [Grafik Zespołów] (
+[ID Zespołu] INT NOT NULL,
 [Clock in] DATETIME,
 [Clock out] DATETIME 
 );
 
-INSERT INTO [Grafik Zespółów] VALUES 
+INSERT INTO [Grafik Zespołów] VALUES 
 (1, '2022-12-01 04:00:00', '2022-12-01 16:00:00'),
 (2, '2022-12-01 16:00:00', '2022-12-02 4:00:00'),
 (3, '2022-12-02 04:00:00', '2022-12-02 16:00:00'),
@@ -22,5 +22,5 @@ INSERT INTO [Grafik Zespółów] VALUES
 (7, '2022-12-08 04:00:00', '2022-12-08 16:00:00'),
 (8, '2022-12-08 16:00:00', '2022-12-09 4:00:00');
 
-SELECT * FROM [Grafik Zespółów]
---DROP TABLE [Grafik Zespółów]
+--SELECT * FROM [Grafik Zespołów]
+--DROP TABLE [Grafik Zespołów]
