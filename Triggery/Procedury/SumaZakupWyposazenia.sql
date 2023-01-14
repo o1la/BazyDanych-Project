@@ -1,5 +1,5 @@
 Create Trigger sumazakup
-Before insert
+BEFORE INSERT
 ON
 [Zakupy Wyposażenia]
 FOR EACH ROW
