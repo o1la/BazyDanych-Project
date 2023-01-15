@@ -1,7 +1,7 @@
 
 Create Trigger sumazakup
 ON [Zakupy Wyposażenia]
-AFTER INSERT
+AFTER INSERT, UPDATE
 AS
 BEGIN
     UPDATE [Zakupy Wyposażenia]
