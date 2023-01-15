@@ -3,7 +3,6 @@ ALTER PROCEDURE [Liczba Przepracowanych Godzin]
     @To DATE,
     @EmployeeID INT
 AS
---WHILE (@From <= @To)
 begin 
     SELECT P.ID, P.Imię, P.Nazwisko, SUM(DATEDIFF(HOUR,GZ.[Clock in],GZ.[Clock out])) AS [Przepracowane godziny]
     FROM [Pracownicy] P
@@ -11,8 +10,9 @@ begin
     Zespoły Z ON (P.[ID Zespołu] = Z.[ID])
         JOIN
     [Grafik Zespołów] GZ ON (GZ.[ID Zespołu] = Z.[ID])
-    WHERE @EmployeeID = P.[ID]
+    WHERE @EmployeeID = P.[ID] AND @From < GZ.[Clock in] AND @To > GZ.[Clock out]
     GROUP BY P.ID, P.Imię, P.Nazwisko
 end
 
---exec [Liczba Przepracowanych Godzin] '2022-12-01', '2022-12-03', 3
+
+--exec [Liczba Przepracowanych Godzin] '2022-12-01', '2022-12-04', 3
