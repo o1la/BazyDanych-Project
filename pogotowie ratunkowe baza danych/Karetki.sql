@@ -3,7 +3,8 @@ CREATE TABLE [Karetki]
  [ID] INT PRIMARY KEY,
  [Model] VARCHAR(3),
  [Rok Produkcji] date,
- [Ostatni przegląd] date
+ [Ostatni przegląd] date,
+ [Następny przegląd] date
 );
 
 --SELECT * FROM Karetki
