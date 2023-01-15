@@ -1,3 +1,4 @@
+--CREATE PROCEDURE [Wypłata]
 ALTER PROCEDURE [Wypłata] 
     @From DATE,
     @To DATE,

@@ -1,3 +1,4 @@
+--CREATE PROCEDURE [Liczba Przepracowanych Godzin]
 ALTER PROCEDURE [Liczba Przepracowanych Godzin] 
     @From DATE,
     @To DATE,
