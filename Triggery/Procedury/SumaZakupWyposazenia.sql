@@ -1,6 +1,4 @@
-Create Trigger sumazakup
+Create Trigger sumazakup ON [Zakupy Wyposażenia]
 BEFORE INSERT
-ON
-[Zakupy Wyposażenia]
-FOR EACH ROW
+
 set new.SUMA=new.Ilość*new.[Cena Jednostkowa];
