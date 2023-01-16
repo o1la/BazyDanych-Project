@@ -1,7 +1,9 @@
 CREATE TABLE [Grafik Zespołów] (
 [ID Zespołu] INT NOT NULL,
 [Clock in] DATETIME,
-[Clock out] DATETIME 
+[Clock out] DATETIME
+   CONSTRAINT FK_IDzespołuGrafik FOREIGN KEY ([ID Zespołu])
+    REFERENCES Zespoły([ID])
 );
 
 INSERT INTO [Grafik Zespołów] VALUES 

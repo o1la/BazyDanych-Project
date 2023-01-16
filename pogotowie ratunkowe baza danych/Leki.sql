@@ -23,5 +23,5 @@ INSERT INTO [Leki] VALUES
 (9,'Clonazepamum TZF', 'POLFA TARCHOMIN', 'Clemastinum Hasco', 2, 30,'tabletki', 17.83),
 (10,'Dexamethasone phosphate SF', 'Sun-Farm', 'Dexamethasoni phosphas', 4, 10,'fiolki 1ml', 27.00);
 
-SELECT * FROM Leki
+--SELECT * FROM Leki
 --DROP TABLE Leki

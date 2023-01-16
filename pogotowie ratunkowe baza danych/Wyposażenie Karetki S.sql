@@ -6,7 +6,7 @@ CREATE TABLE [Minimalne wyposażenie karetki S]
     REFERENCES [Wyposażenie] ([ID Produktu])
 );
 
-INSERT INTO [Wyposażenie karetki S] VALUES
+INSERT INTO [Minimalne wyposażenie karetki S] VALUES
 (1, 2),
 (2, 2),
 (3, 2),
@@ -29,5 +29,5 @@ INSERT INTO [Wyposażenie karetki S] VALUES
 (20, 4),
 (21, 10);
 
-SELECT * FROM [Wyposażenie Karetki S]
-DROP TABLE [Wyposażenie Karetki S]
+--SELECT * FROM [Minimalne wyposażenie Karetki S]
+--DROP TABLE [Minimalne wyposażenie Karetki S]

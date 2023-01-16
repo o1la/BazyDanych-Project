@@ -1,11 +1,12 @@
 CREATE TABLE [Pacjenci](
  [ID] INT PRIMARY Key,
- [Pesel] VARCHAR(11),
+ [PESEL] VARCHAR(11),
  [Imię] VARCHAR(50),
  [Nazwisko] VARCHAR(50),
  [Miasto] VARCHAR(50),
  [Ulica] VARCHAR(50),
- [Data Urodzenia] date
+ [Data Urodzenia] date,
+ CONSTRAINT checkPesel CHECK (dbo.validPesel(PESEL) = 1)
 );
 
 INSERT INTO Pacjenci VALUES
@@ -19,3 +20,5 @@ INSERT INTO Pacjenci VALUES
 
 --SELECT * FROM Pacjenci
 --DROP TABLE Pacjenci
+
+--ALTER TABLE Pacjenci ADD CONSTRAINT checkPesel CHECK (dbo.validPesel(Pesel) = 1)

@@ -1,3 +1,22 @@
+DROP TABLE [Budynki Pogotowia]
+DROP TABLE [Grafik Zespołów]
+DROP TABLE [Inne Wydatki]
+DROP TABLE[Karetki]
+DROP TABLE [Leki]
+DROP TABLE Pacjenci
+DROP TABLE Pracownicy
+DROP TABLE Stanowiska
+DROP TABLE [Typ Wyposażenia]
+DROP TABLE [Typy Budynków]
+DROP TABLE Urlopy
+DROP TABLE Wyjazdy
+DROP TABLE [Wyposażenie karetki P]
+DROP TABLE Wyposażenie
+DROP TABLE [Zakupy Wyposażenia]
+DROP TABLE Zespoły
+DROP TABLE Zgłoszenia
+
+
 CREATE TABLE [Stanowiska] (
   [ID Stanowiska] INT PRIMARY KEY,
   [Nazwa] VARCHAR(60),
