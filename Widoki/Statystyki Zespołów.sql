@@ -1,5 +1,5 @@
 CREATE VIEW [Statystyki Zespołów] AS 
-    SELECT [Zespół], COUNT([Zespół]) AS [Ilość Wyjazdów] FROM [Wyjazdy]
+    SELECT [Zespół], COUNT([Zespół]) AS [Ilość Wyjazdów] FROM [Wyjazdy Karetki]
     GROUP BY [Zespół]
 
 --SELECT * FROM [Statystyki Zespołów]

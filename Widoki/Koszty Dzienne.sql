@@ -1,4 +1,4 @@
---Creat View [Koszty Dzienne] AS
+CREATE VIEW [Koszty Dzienne] AS
 SELECT IIF(SumaWypos.DATA is NULL, SumaInne.DATA, SumaWypos.DATA) as Data, IIF(SumaWypos.[Suma Dzienna] is NULL, SumaInne.[Suma Dzienna], IIF(SumaInne.[Suma Dzienna] is NULL,SumaWypos.[Suma Dzienna], SumaWypos.[Suma Dzienna]+ SumaInne.[Suma Dzienna])) as [Suma Dzienna] FROM
 (
     SELECT Data as Data, SUM([SUMA]) [Suma Dzienna] FROM [Zakupy Wyposażenia]

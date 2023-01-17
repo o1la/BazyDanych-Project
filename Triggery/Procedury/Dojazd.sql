@@ -3,8 +3,6 @@ ALTER PROCEDURE [Dojazd]
     @ID INT
 AS
 begin 
-
-
     SELECT WK.[ID zgłoszenia], P.Imię + ' ' + P.Nazwisko AS [Kierowca], Z.Data [Czas zgłoszenia], WK.[Czas wyjazdu], WK.[Czas powrotu], DATEDIFF(MINUTE,WK.[Czas wyjazdu], WK.[Czas powrotu]) AS [Długość dojazu minuty], DATEDIFF(SECOND,WK.[Czas wyjazdu], WK.[Czas powrotu]) AS [Długość dojazu sekundy] ,Z.Adres, Z.Miasto FROM Zgłoszenia Z
         JOIN 
     [Wyjazdy Karetki] WK ON (WK.[ID Zgłoszenia] = Z.[ID Zgłoszenia])
