@@ -13,4 +13,4 @@ WHERE (W.Karetka = K.ID AND K.Model = 'S')
 GROUP BY CONVERT(DATE, W.[Czas wyjazdu]) ) AS LiczbaS
 ON LiczbaP.Dzień = LiczbaS.Dzień
 
-SELECT * FROM [Wyjazdy Dzienne]
+--SELECT * FROM [Wyjazdy Dzienne]

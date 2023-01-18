@@ -10,3 +10,5 @@ FULL OUTER JOIN
     Group By (Data)
 ) as SumaInne
 On SumaInne.Data = SumaWypos.Data
+
+

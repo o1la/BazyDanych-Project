@@ -16,5 +16,3 @@ INSERT INTO [Budynki Pogotowia] VALUES
 (1, 1, 'Kraków', 'ul. Winnicka 2'),
 (2, 1, 'Kraków', 'ul. Polna 31'),
 (3, 2, 'Kraków', 'ul. Winnicka 2');
-
-

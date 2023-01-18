@@ -20,5 +20,3 @@ INSERT INTO Pacjenci VALUES
 
 --SELECT * FROM Pacjenci
 --DROP TABLE Pacjenci
-
---ALTER TABLE Pacjenci ADD CONSTRAINT checkPesel CHECK (dbo.validPesel(Pesel) = 1)
