@@ -1,15 +1,21 @@
-CREATE FUNCTION check_birthdate()
-RETURNS TRIGGER
+CREATE FUNCTION check_birthdate
+(
+    @data DATE
+)
+RETURNS BIT
 AS
 BEGIN
-    IF EXISTS (SELECT 1 FROM inserted WHERE [Data Urodzenia] > GETDATE())
+    DECLARE @result BIT;
+    SET @result = 1;
+
+    IF (@data > GETDATE())
     BEGIN
-        RAISERROR('[Data Urodzenia] nie może być późniejsza niż aktualna data',16,1);
-        RETURN NULL;
+        SET @result = 0;
     END
-    RETURN NEW;
+
+    RETURN @result;
 END
 
 
-ALTER TABLE Pacjenci
-ADD CONSTRAINT chk_birthdate CHECK (dbo.check_birthdate() = 1)
+--ALTER TABLE Pacjenci
+--ADD CONSTRAINT chk_birthdate CHECK (dbo.check_birthdate([Data Urodzenia]) = 1)
