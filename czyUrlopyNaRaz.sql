@@ -7,10 +7,13 @@ BEGIN
 
     SELECT @overlap = COUNT(*)
     FROM Urlopy
-    WHERE EXISTS (SELECT 1 FROM Urlopy WHERE [ID Pracownika] <> Urlopy.[ID Pracownika] AND (([Początek] <= Urlopy.[Koniec] AND [Początek] >= Urlopy.[Początek]) OR ([Koniec] <= Urlopy.[Koniec] AND [Koniec] >= Urlopy.[Początek]))
+    WHERE EXISTS (SELECT 1 FROM Urlopy B, Urlopy A WHERE A.[ID Pracownika] <> B.[ID Pracownika] AND ((A.[Początek] <= B.[Koniec] AND A.[Początek] >= B.[Początek]) OR (A.[Koniec] <= B.[Koniec] AND A.[Koniec] >= B.[Początek])))
 
     IF @overlap > 0 
         SET @overlap = 1
 
     RETURN @overlap;
 END
+
+--ALTER TABLE Urlopy
+--ADD CONSTRAINT chk_overlap_vacation CHECK (dbo.check_overlap_vacation() = 0)
