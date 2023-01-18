@@ -1,4 +1,4 @@
-CREATE TABLE [Byli_Pracownicy]
+CREATE TABLE [Byli Pracownicy]
 (
     [ID] INT PRIMARY KEY,
  [Imię] VARCHAR(50),
