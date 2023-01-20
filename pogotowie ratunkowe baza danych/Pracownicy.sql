@@ -1,13 +1,13 @@
 CREATE TABLE [Pracownicy]
 (
  [ID] INT PRIMARY KEY,
- [Imię] VARCHAR(50),
- [Nazwisko] VARCHAR(50),
- [PESEL] VARCHAR(11),
+ [Imię] VARCHAR(50) NOT NULL,
+ [Nazwisko] VARCHAR(50) NOT NULL,
+ [PESEL] VARCHAR(11) NOT NULL,
  [ID Stanowiska] INT NOT NULL,
  [ID Zespołu] INT,
- [Miasto] VARCHAR(50),
- [Ulica] VARCHAR(50),
+ [Miasto] VARCHAR(50) NOT NULL,
+ [Ulica] VARCHAR(50) NOT NULL,
     CONSTRAINT FK_IDstanowiska FOREIGN KEY ([ID Stanowiska])
     REFERENCES Stanowiska([ID Stanowiska]),
     CONSTRAINT FK_IDzespołu FOREIGN KEY ([ID Zespołu])

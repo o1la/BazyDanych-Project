@@ -2,8 +2,8 @@ CREATE TABLE [Wyposażenie]
 (
  [ID Typu] INT,
  [ID Produktu] INT PRIMARY KEY,
- [Nazwa Produktu] VARCHAR(50),
- [Cena jednostkowa] MONEY,
+ [Nazwa Produktu] VARCHAR(50) NOT NULL,
+ [Cena jednostkowa] MONEY NOT NULL,
     CONSTRAINT FK_IDTypwyp FOREIGN KEY ([ID Typu])
     REFERENCES [Typ Wyposażenia] ([ID])
 );

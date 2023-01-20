@@ -1,7 +1,7 @@
 CREATE TABLE [Zgłoszenia] 
 (
  [ID Zgłoszenia] INT PRIMARY KEY,
- [Data] DATETIME,
+ [Data] DATETIME not null,
  [Zgłaszający] VARCHAR(50),
  [Adres] VARCHAR(50),
  [Miasto] VARCHAR(50),

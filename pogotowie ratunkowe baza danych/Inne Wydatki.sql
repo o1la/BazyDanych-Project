@@ -1,9 +1,9 @@
 CREATE TABLE [Inne Wydatki]
 (
- [ID] INT,
- [Typ Wydatku] VARCHAR(50),
- [Koszt] MONEY,
- [Data] DATE
+ [ID] INT PRIMARY KEY,
+ [Typ Wydatku] VARCHAR(50) NOT NULL,
+ [Koszt] MONEY NOT NULL,
+ [Data] DATE NOT NULL
 )
  
 --SELECT * FROM [Inne Wydatki]

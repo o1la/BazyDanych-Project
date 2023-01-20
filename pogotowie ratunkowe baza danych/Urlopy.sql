@@ -1,8 +1,8 @@
 CREATE TABLE [Urlopy] (
 [ID Pracownika] INT NOT NULL,
-[Początek] date,
-[Koniec] date,
-[Płatny] BIT
+[Początek] date NOT NULL,
+[Koniec] date NOT NULL,
+[Płatny] BIT NOT NULL
     CONSTRAINT FK_IDpracownika FOREIGN KEY ([ID Pracownika])
     REFERENCES Pracownicy([ID])
 );

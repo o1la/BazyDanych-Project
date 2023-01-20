@@ -1,7 +1,7 @@
 CREATE TABLE [Typ Wyposażenia]
 (
  [ID] INT PRIMARY Key,
- [Nazwa] VARCHAR(50)
+ [Nazwa] VARCHAR(50) NOT NULL
 )
 
 --SELECT * FROM [Typ Wyposażenia]

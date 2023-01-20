@@ -1,7 +1,9 @@
 CREATE TABLE [Zespoły] (
  [ID] INT PRIMARY KEY,
- [Nazwa] VARCHAR(50),
- [ID Lidera] INT
+ [Nazwa] VARCHAR(50) NOT NULL,
+ [ID Lidera] INT NOT NULL
+ CONSTRAINT FK_IDLidera FOREIGN KEY ([ID Lidera])
+ REFERENCES [Pracownicy] ([ID])
 );
 
 --DROP TABLE Zespoły

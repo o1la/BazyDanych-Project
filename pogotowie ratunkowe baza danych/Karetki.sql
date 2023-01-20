@@ -1,10 +1,10 @@
 CREATE TABLE [Karetki]
 (
  [ID] INT PRIMARY KEY,
- [Model] VARCHAR(3),
- [Rok Produkcji] date,
- [Ostatni przegląd] date,
- [Następny przegląd] date
+ [Model] VARCHAR(3) NOT NULL,
+ [Rok Produkcji] date NOT NULL,
+ [Ostatni przegląd] date NOT NULL,
+ [Następny przegląd] date NOT NULL
 );
 
 --SELECT * FROM Karetki

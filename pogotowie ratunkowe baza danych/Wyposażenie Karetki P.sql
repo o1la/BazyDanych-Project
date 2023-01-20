@@ -1,7 +1,7 @@
 CREATE TABLE [Minimalne wyposażenie karetki P]
 (
  [ID Produktu] INT NOT NULL,
- [Ilość] INT
+ [Ilość] INT NOT NULL
     CONSTRAINT FK_IDproduktu FOREIGN KEY ([ID Produktu])
     REFERENCES [Wyposażenie] ([ID Produktu])
 );

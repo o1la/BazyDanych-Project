@@ -1,6 +1,6 @@
 CREATE TABLE [Stanowiska] (
   [ID Stanowiska] INT PRIMARY KEY,
-  [Nazwa] VARCHAR(60),
+  [Nazwa] VARCHAR(60) NOT NULL,
   [Stawka Godzinowa] MONEY NOT NULL
 );
 

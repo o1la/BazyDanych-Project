@@ -1,12 +1,12 @@
 CREATE TABLE [Zakupy Wyposażenia]
 (
- [ID] INT,
+ [ID] INT PRIMARY KEY,
  [ID Typu] INT,
  [ID Produktu] INT,
- [Ilość] INT,
- [Cena jednostkowa] MONEY,
- [Suma] MONEY,
- [Data] DATE
+ [Ilość] INT NOT NULL,
+ [Cena jednostkowa] MONEY NOT NULL,
+ [Suma] MONEY NOT NULL,
+ [Data] DATE NOT NULL
     CONSTRAINT FK_IDtypzakupy FOREIGN KEY ([ID Typu])
     REFERENCES [Typ Wyposażenia] ([ID]),
     CONSTRAINT FK_IDprduktuZakup FOREIGN KEY ([ID Produktu])
