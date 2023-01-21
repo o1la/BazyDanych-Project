@@ -1,4 +1,4 @@
-CREATE VIEW [Zgłoszenia dzienne] AS
+CREATE VIEW [Zgłoszenia a wyjazdy dzienne] AS
     SELECT 
     (SELECT COUNT(*) FROM Zgłoszenia) AS [Ilość Zgłoszeń],
     (SELECT COUNT(*) FROM [Wyjazdy Karetki]) AS [Ilość Wyjazdów],
