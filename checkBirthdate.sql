@@ -1,19 +1,22 @@
-CREATE FUNCTION check_birthdate
+CREATE alter FUNCTION check_birthdate
 (
-    @data DATE
+   @data DATE
 )
 RETURNS BIT
 AS
 BEGIN
-    DECLARE @result BIT;
-    SET @result = 1;
+   DECLARE @result BIT;
+   SET @result = 1;
 
-    IF (@data > GETDATE())
-    BEGIN
-        SET @result = 0;
-    END
-
-    RETURN @result;
+   IF (@data > GETDATE())
+   BEGIN
+       SET @result = 0;
+   END
+   IF (@result = 0)
+   BEGIN
+       return cast('Została wpisana zła data' as bit); 
+   END
+   RETURN @result;
 END
 
 
