@@ -1,4 +1,4 @@
-CREATE TABLE [Wyjazdy] 
+CREATE TABLE [Wyjazdy do zgłoszeń] 
 (
  [ID Zgłoszenia] INT NOT NULL,
  [Czas wyjazdu] DATETIME NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE [Wyjazdy]
 --SELECT * FROM [Wyjazdy Karetki]
 --DROP TABLE [Wyjazdy Karetki]
 
-INSERT INTO [Wyjazdy]  VALUES
+INSERT INTO [Wyjazdy do zgłoszeń]  VALUES
 (1, '2022-12-01 09:13:02', '2022-12-01 09:20:27', 1, 1, 1 ),
 (2, '2022-12-01 14:30:42', '2022-12-01 14:43:30', 3, 1, NULL),
 (3, '2022-12-01 15:06:12', '2022-12-01 15:20:49', 1, 1, NULL),
