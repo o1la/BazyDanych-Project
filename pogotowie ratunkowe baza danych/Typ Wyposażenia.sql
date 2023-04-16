@@ -1,13 +1,13 @@
-CREATE TABLE [Typ Wyposażenia]
+CREATE TABLE [Types of Equipment]
 (
  [ID] INT PRIMARY Key,
- [Nazwa] VARCHAR(50) NOT NULL
+ [name] VARCHAR(50) NOT NULL
 )
 
 --SELECT * FROM [Typ Wyposażenia]
 --DROP TABLE [Typ Wyposażenia]
 
-INSERT INTO [Typ Wyposażenia] VALUES
+INSERT INTO [Types of Equipment] VALUES
 (1, 'Transportacja'),
 (2, 'Opatrywanie ran'),
 (3, 'Unieruchomienie'),

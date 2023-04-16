@@ -1,15 +1,15 @@
-CREATE TABLE [Pacjenci](
+CREATE TABLE [Patients](
  [ID] INT PRIMARY Key,
  [PESEL] VARCHAR(11),
- [Imię] VARCHAR(50),
- [Nazwisko] VARCHAR(50),
- [Miasto] VARCHAR(50),
- [Ulica] VARCHAR(50),
- [Data Urodzenia] date,
+ [Name] VARCHAR(50),
+ [Surname] VARCHAR(50),
+ [City] VARCHAR(50),
+ [Street] VARCHAR(50),
+ [Date of birth] date,
  CONSTRAINT checkPesel CHECK (dbo.validPesel(PESEL) = 1)
 );
 
-INSERT INTO Pacjenci VALUES
+INSERT INTO Patients VALUES
 (1, '99041635492', 'Lucjan', 'Michalak', 'Kraków', 'ul. Kierunkowa 13', '1999-04-16'),
 (2, '54020935699', 'Oktawian', 'Zieliński', 'Kraków', 'ul. Długa 51', '1954-02-09'),
 (3, '88012461875', 'Fabian', 'Jaworski', 'Skawina', 'ul. Ryska 62/85', '1988-01-24'),

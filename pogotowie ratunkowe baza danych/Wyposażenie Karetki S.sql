@@ -1,12 +1,12 @@
-CREATE TABLE [Minimalne wyposażenie karetki S]
+CREATE TABLE [Minimal Equipment of Ambulance S]
 (
- [ID Produktu] INT NOT NULL,
- [Ilość] INT NOT NULL
-    CONSTRAINT FK_IDproduktuS FOREIGN KEY ([ID Produktu])
-    REFERENCES [Wyposażenie] ([ID Produktu])
+ [Product ID] INT NOT NULL,
+ [Quantity] INT NOT NULL
+    CONSTRAINT FK_IDproduktuS FOREIGN KEY ([Product ID])
+    REFERENCES [Equipment] ([Product ID])
 );
 
-INSERT INTO [Minimalne wyposażenie karetki S] VALUES
+INSERT INTO [Minimal Equipment of Ambulance S] VALUES
 (1, 2),
 (2, 2),
 (3, 2),

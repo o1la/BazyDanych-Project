@@ -1,13 +1,13 @@
-CREATE TABLE [Stanowiska] (
-  [ID Stanowiska] INT PRIMARY KEY,
-  [Nazwa] VARCHAR(60) NOT NULL,
-  [Stawka Godzinowa] MONEY NOT NULL
+CREATE TABLE [Positions] (
+  [ID Position] INT PRIMARY KEY,
+  [Name] VARCHAR(60) NOT NULL,
+  [Hourly Wage] MONEY NOT NULL
 );
 
 --SELECT * FROM Stanowiska
 --DROP TABLE Stanowiska
 
-INSERT INTO Stanowiska VALUES 
+INSERT INTO Position VALUES 
 (1, 'Dyrektor', 100.00),
 (2, 'Menadzer', 70.00),
 (3, 'Starszy Ratownik Medyczny', 55.00),

@@ -1,24 +1,24 @@
-CREATE TABLE [Pracownicy]
+CREATE TABLE [Employees]
 (
  [ID] INT PRIMARY KEY,
- [Imię] VARCHAR(50) NOT NULL,
- [Nazwisko] VARCHAR(50) NOT NULL,
+ [Name] VARCHAR(50) NOT NULL,
+ [Surname] VARCHAR(50) NOT NULL,
  [PESEL] VARCHAR(11) NOT NULL,
- [ID Stanowiska] INT NOT NULL,
- [ID Zespołu] INT,
- [Miasto] VARCHAR(50) NOT NULL,
- [Ulica] VARCHAR(50) NOT NULL,
-    CONSTRAINT FK_IDstanowiska FOREIGN KEY ([ID Stanowiska])
-    REFERENCES Stanowiska([ID Stanowiska]),
-    CONSTRAINT FK_IDzespołu FOREIGN KEY ([ID Zespołu])
-    REFERENCES Zespoły([ID]),
+ [ID Position] INT NOT NULL,
+ [ID Squad] INT,
+ [City] VARCHAR(50) NOT NULL,
+ [Street] VARCHAR(50) NOT NULL,
+    CONSTRAINT FK_IDstanowiska FOREIGN KEY ([ID Position])
+    REFERENCES Positions([ID Position]),
+    CONSTRAINT FK_IDzespołu FOREIGN KEY ([ID Squad])
+    REFERENCES Squads([ID]),
     CONSTRAINT checkPeselPracownicy CHECK (dbo.validPesel(PESEL) = 1)
 );
 
 --DROP TABLE Pracownicy
 --SELECT * FROM Pracownicy
 
-INSERT INTO Pracownicy VALUES 
+INSERT INTO Employees VALUES 
 (1, 'Albert', 'Bosowski', '01210837334', 1, NULL, 'Kraków', 'ul. Promienna 25'),
 (2, 'Mariola', 'Szyszka', '69091465242', 2, NULL, 'Kraków', 'ul. Ametystowa 46'),
 --Starsi ratownicy

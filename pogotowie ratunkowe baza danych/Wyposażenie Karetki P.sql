@@ -1,9 +1,9 @@
-CREATE TABLE [Minimalne wyposażenie karetki P]
+CREATE TABLE [Minimal Equipment of Ambulance P]
 (
- [ID Produktu] INT NOT NULL,
- [Ilość] INT NOT NULL
-    CONSTRAINT FK_IDproduktu FOREIGN KEY ([ID Produktu])
-    REFERENCES [Wyposażenie] ([ID Produktu])
+ [Product ID] INT NOT NULL,
+ [Quantity] INT NOT NULL
+    CONSTRAINT FK_IDproduktu FOREIGN KEY ([Product ID])
+    REFERENCES [Equipment] ([Product ID])
 );
 
 --SELECT * FROM [Minimalne wyposażenie Karetki P]

@@ -1,16 +1,16 @@
-CREATE TABLE [Urlopy] (
-[ID Pracownika] INT NOT NULL,
-[Początek] date NOT NULL,
-[Koniec] date NOT NULL,
-[Płatny] BIT NOT NULL
-    CONSTRAINT FK_IDpracownika FOREIGN KEY ([ID Pracownika])
-    REFERENCES Pracownicy([ID])
+CREATE TABLE [Leave of Absence] (
+[ID Employee] INT NOT NULL,
+[Start Date] date NOT NULL,
+[End Date] date NOT NULL,
+[Paid] BIT NOT NULL
+    CONSTRAINT FK_IDpracownika FOREIGN KEY ([ID Employee])
+    REFERENCES Employees([ID])
 );
 
 --SELECT * FROM Urlopy
 --DROP TABLE Urlopy
 
-INSERT INTO Urlopy VALUES
+INSERT INTO [Leave of Absence] VALUES
 (7, '2022-04-28', '2022-05-10', 1),
 (2, '2023-01-1', '2023-01-18', 1),
 (6, '2023-02-21', '2023-02-27', 1),

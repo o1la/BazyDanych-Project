@@ -1,15 +1,15 @@
-CREATE TABLE [Zespoły] (
+CREATE TABLE [Squads] (
  [ID] INT PRIMARY KEY,
- [Nazwa] VARCHAR(50) NOT NULL,
- [ID Lidera] INT NOT NULL
- CONSTRAINT FK_IDLidera FOREIGN KEY ([ID Lidera])
- REFERENCES [Pracownicy] ([ID])
+ [Name] VARCHAR(50) NOT NULL,
+ [ID Lider] INT NOT NULL
+ CONSTRAINT FK_IDLidera FOREIGN KEY ([ID Lider])
+ REFERENCES [Employees] ([ID])
 );
 
 --DROP TABLE Zespoły
 --SELECT * FROM Zespoły
 
-INSERT INTO Zespoły VALUES 
+INSERT INTO Squads VALUES 
 (1, 'Niedzwiedzie', 3),
 (2, 'Tygrysy', 4),
 (3, 'Małpy', 5),

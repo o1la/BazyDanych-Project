@@ -1,18 +1,18 @@
-CREATE TABLE [Zgłoszenia] 
+CREATE TABLE [Calls] 
 (
- [ID Zgłoszenia] INT PRIMARY KEY,
- [Data] DATETIME not null,
- [Zgłaszający] VARCHAR(50),
- [Adres] VARCHAR(50),
- [Miasto] VARCHAR(50),
- [Powód] VARCHAR(50)
+ [ID] INT PRIMARY KEY,
+ [Date] DATETIME not null,
+ [Caller] VARCHAR(50),
+ [Address] VARCHAR(50),
+ [City] VARCHAR(50),
+ [Reason] VARCHAR(50)
 );
  
 --SELECT * FROM Zgłoszenia
 --DROP TABLE Zgłoszenia
 --DELETE Zgłoszenia
 
-INSERT INTO Zgłoszenia VALUES
+INSERT INTO Calls VALUES
 (1, '2022-12-01 09:10:29', 'Aleksander Pawlak', 'ul. Kierunkowa 13', 'Kraków', 'nagły ostry ból brzucha'),
 (2, '2022-12-01 14:27:30', 'Mateusz Makowski', 'ul. Boczna 74', 'Kraków', 'porażenie prądem'),
 (3, '2022-12-01 15:02:56', 'Franciszka Jakubowska', 'ul. Ryska 62/85', 'Skawina', 'nasilona duszność'),

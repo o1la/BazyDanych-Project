@@ -1,11 +1,11 @@
-CREATE TABLE [Byli Pracownicy]
+CREATE TABLE [Previous Employees]
 (
     [ID] INT PRIMARY KEY,
- [Imię] VARCHAR(50),
- [Nazwisko] VARCHAR(50),
- [PESEL] VARCHAR(11),
- [ID Stanowiska] INT NOT NULL,
- [Miasto] VARCHAR(50),
- [Ulica] VARCHAR(50),
- [Data usunięcia] DATE
+    [Name] VARCHAR(50),
+    [Surname] VARCHAR(50),
+    [PESEL] VARCHAR(11),
+    [ID Position] INT NOT NULL,
+    [City] VARCHAR(50),
+    [Street] VARCHAR(50),
+    [Date of removal] DATE
 )

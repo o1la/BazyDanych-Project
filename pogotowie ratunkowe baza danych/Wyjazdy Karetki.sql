@@ -1,14 +1,14 @@
-CREATE TABLE [Wyjazdy do zgłoszeń] 
+CREATE TABLE [Ambulance Departure] 
 (
- [ID Zgłoszenia] INT NOT NULL,
- [Czas wyjazdu] DATETIME NOT NULL,
- [Czas dojazdu] DATETIME NOT NULL,
- [Czas powrotu] DATETIME NOT NULL,
- [Karetka] INT NOT NULL,
- [Zespół] INT NOT NULL,
- [ID Pacjenta] INT,
-    CONSTRAINT FK_IDzgłoszenia FOREIGN KEY ([ID Zgłoszenia])
-    REFERENCES Zgłoszenia([ID Zgłoszenia]),
+ [Call ID] INT NOT NULL,
+ [Departure Time] DATETIME NOT NULL,
+ [Arrival Time] DATETIME NOT NULL,
+ [Return Time ] DATETIME NOT NULL,
+ [Ambulance] INT NOT NULL,
+ [Squad] INT NOT NULL,
+ [Patient ID] INT,
+    CONSTRAINT FK_IDzgłoszenia FOREIGN KEY ([Call ID])
+    REFERENCES Calls([ID]),
     CONSTRAINT FK_karetka FOREIGN KEY ([Karetka])
     REFERENCES Karetki([ID]),
     CONSTRAINT FK_IDzespołu2 FOREIGN KEY ([Zespół])

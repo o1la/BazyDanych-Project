@@ -1,12 +1,12 @@
-CREATE TABLE [Grafik Zespołów] (
-[ID Zespołu] INT NOT NULL,
-[Clock in] DATETIME NOT NULL,
-[Clock out] DATETIME NOT NULL
-   CONSTRAINT FK_IDzespołuGrafik FOREIGN KEY ([ID Zespołu])
-    REFERENCES Zespoły([ID])
+CREATE TABLE [Squad Schedule] (
+    [ID Squad] INT NOT NULL,
+    [Clock in] DATETIME NOT NULL,
+    [Clock out] DATETIME NOT NULL
+        CONSTRAINT FK_IDzespołuGrafik FOREIGN KEY ([ID Squad])
+        REFERENCES Squads([ID])
 );
 
-INSERT INTO [Grafik Zespołów] VALUES 
+INSERT INTO [Squad Schedule] VALUES 
 (1, '2022-12-01 04:00:00', '2022-12-01 16:00:00'),
 (2, '2022-12-01 16:00:00', '2022-12-02 4:00:00'),
 (3, '2022-12-02 04:00:00', '2022-12-02 16:00:00'),

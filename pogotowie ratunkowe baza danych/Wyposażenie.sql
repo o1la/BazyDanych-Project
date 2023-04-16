@@ -1,14 +1,14 @@
-CREATE TABLE [Wyposażenie]
+CREATE TABLE [Equipment]
 (
- [ID Typu] INT,
- [ID Produktu] INT PRIMARY KEY,
- [Nazwa Produktu] VARCHAR(50) NOT NULL,
- [Cena jednostkowa] MONEY NOT NULL,
-    CONSTRAINT FK_IDTypwyp FOREIGN KEY ([ID Typu])
-    REFERENCES [Typ Wyposażenia] ([ID])
+ [Type ID] INT,
+ [Product ID] INT PRIMARY KEY,
+ [Name] VARCHAR(50) NOT NULL,
+ [Price] MONEY NOT NULL,
+    CONSTRAINT FK_IDTypwyp FOREIGN KEY ([Type ID])
+    REFERENCES [Type of Equipment] ([ID])
 );
 
-INSERT INTO [Wyposażenie] VALUES
+INSERT INTO [Equipment] VALUES
 (1, 1, 'Nosze główne', 350.04),
 (1, 2, 'Nosze podbierakowe', 300.11),
 (1, 3, 'Krzesełko kardiologiczne', 3500.16),
